@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student CRUD App</h1>
+
+        <div class="form-container">
+            <h2>Register Student</h2>
+            <form id="registerForm">
+                <input type="text" id="regno" placeholder="Registration Number" required>
+                <input type="text" id="name" placeholder="Student Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="department" placeholder="Department" required>
+                <input type="number" id="phoneno" placeholder="Phone no" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+        <!-- Search Form -->
+        <div class="form-container">
+            <h2>Search Student</h2>
+            <input type="text" id="searchRegno" placeholder="Enter Registration Number" required>
+            <button id="searchButton">Search</button>
+            <div id="searchResult"></div>
+        </div>
+
+        <!-- Update Form -->
+        <div class="form-container">
+            <h2>Update Student</h2>
+            <input type="text" id="updateRegno" placeholder="Registration Number" required>
+            <input type="text" id="updateName" placeholder="New Name">
+            <input type="email" id="updateEmail" placeholder="New Email">
+            <input type="text" id="updateDepartment" placeholder="Department">
+            <input type="number" id="updatePhoneno" placeholder="Phone No">
+
+            <button id="updateButton">Update</button>
+        </div>
+
+        <!-- Delete Form -->
+        <div id="deleteStudent">
+            <h3>Delete Student</h3>
+            <label for="deleteId">Student Registration Number (Regno):</label>
+            <input type="text" id="deleteId" placeholder="Enter Student Registration Number">
+            <button onclick="deleteStudent()">Delete</button>
+            <div id="messageBox"></div>
+        </div>        
+
+    <script src="script.js"></script>
+</body>
+</html>
